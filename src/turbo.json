@@ -1,15 +1,12 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "ui": "tui",
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "inputs": ["$TURBO_DEFAULT", ".env*"],
+      "outputs": [".svelte-kit/**", ".vercel/**"]
     },
-    "lint": {
-      "dependsOn": ["^lint"]
-    },
+    "lint": {},
     "dev": {
       "cache": false,
       "persistent": true
