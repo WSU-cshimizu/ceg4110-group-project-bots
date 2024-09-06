@@ -34,7 +34,8 @@ Our team is made up of four members, each bringing their expertise to different 
 
 4. **Database**
    - MongoDB will be our choice for managing data. It will store user details, event info, and bot settings, providing a reliable and scalable solution that supports all of the bot’s features.
-   - **Why Prisma ORM** Prisma ORM as stated previously will make manipulation of data through MongoDB easier. This ORM was used simply due to preference. 
+   - Primsa ORM provides a set of tolls and abstractions that help with querying and manipulation of data.
+
 
 ## System Architecture
 We’re planning a client-server setup where users interact with the bot through a web-based frontend. The frontend, created with Svelte, will let users log in with their Discord accounts and manage their interactions with the bot. The backend, also created with Svelte, will connect the frontend with the Discord bot and MongoDB database. The Discord bot, implemented using discord.js, will handle requests and commands from Discord servers and communicate with the backend to update or retrieve information. This setup will ensure that everything works together smoothly, creating a seamless user experience.
@@ -52,6 +53,7 @@ We’re planning a client-server setup where users interact with the bot through
 
 - **Database:** MongoDB
   - **Why MongoDB:** MongoDB is flexible and scalable, handling a wide range of data types and supporting complex queries. It’s a great fit for our needs.
+  - **Why Prisma ORM** Prisma ORM as stated previously will make manipulation of data through MongoDB easier. This ORM was used simply due to preference. 
 
 ## Development Approach
 We’ll use Agile methodology for this project, with sprints lasting between one week and ten days. Each sprint will focus on specific features and deliverables, allowing us to iterate and adjust our goals as needed. This approach will help us stay flexible, incorporate feedback, and continuously improve the project. Regular meetings and sprint reviews will be held to keep the team aligned as well as address any challenges we may face. This will ensure we stay on track and refine the project as we go.
