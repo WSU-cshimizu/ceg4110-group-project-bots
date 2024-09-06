@@ -19,7 +19,7 @@ Our team is made up of four members, each bringing their expertise to different 
    - Ishan will develop the core features of the Discord bot using discord.js. He’ll set up functionalities for managing roles, processing event registrations, and sending out automated alerts and notifications.
 
 4. **Database Management: Gani**
-   - Gani will manage our MongoDB database. This includes setting up the database schema, handling data storage and retrieval, and making sure everything stays consistent. This will support features like event registrations and user profiles.
+   - Gani will manage our MongoDB database. This includes setting up the database schema, handling data storage and retrieval, and making sure everything stays consistent. This will support features like event registrations and user profiles. Prisma ORM will be used to help query and manipulate the data.
 
 ## Components of the Bot
 
@@ -34,6 +34,7 @@ Our team is made up of four members, each bringing their expertise to different 
 
 4. **Database**
    - MongoDB will be our choice for managing data. It will store user details, event info, and bot settings, providing a reliable and scalable solution to support all of the bot’s features.
+   - Primsa ORM provides a set of tolls and abstractions that help with querying and manipulation of data. 
 
 ## System Architecture
 We’re planning a client-server setup where users interact with the bot through a web-based frontend. The frontend, created with Svelte, will let users log in with their Discord accounts and manage their interactions with the bot. The backend, also in Svelte, will connect the frontend with the Discord bot and MongoDB database. The Discord bot, implemented using discord.js, will handle requests and commands from Discord servers and communicate with the backend to update or retrieve information. This setup will ensure that everything works together smoothly, creating a seamless user experience.
@@ -51,6 +52,7 @@ We’re planning a client-server setup where users interact with the bot through
 
 - **Database:** MongoDB
   - **Why MongoDB:** MongoDB is flexible and scalable, handling a wide range of data types and supporting complex queries. It’s a great fit for our needs.
+  - **Why Prisma ORM** Prisma ORM as stated previously will make manipulation of data through MongoDB easier. This ORM was used simply due to preference. 
 
 ## Development Approach
 We’ll use Agile methodology for this project, with sprints lasting between one week and ten days. Each sprint will focus on specific features and deliverables, allowing us to iterate and adjust our goals as needed. This approach will help us stay flexible, incorporate feedback, and continuously improve the project. Regular meetings and sprint reviews will keep the team aligned and address any challenges, ensuring we stay on track and refine the project as we go.
