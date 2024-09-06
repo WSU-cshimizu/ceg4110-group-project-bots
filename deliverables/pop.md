@@ -34,6 +34,7 @@ Our team is made up of four members, each bringing their expertise to different 
 
 4. **Database**
    - MongoDB will be our choice for managing data. It will store user details, event info, and bot settings, providing a reliable and scalable solution that supports all of the bot’s features.
+   - **Why Prisma ORM** Prisma ORM as stated previously will make manipulation of data through MongoDB easier. This ORM was used simply due to preference. 
 
 ## System Architecture
 We’re planning a client-server setup where users interact with the bot through a web-based frontend. The frontend, created with Svelte, will let users log in with their Discord accounts and manage their interactions with the bot. The backend, also created with Svelte, will connect the frontend with the Discord bot and MongoDB database. The Discord bot, implemented using discord.js, will handle requests and commands from Discord servers and communicate with the backend to update or retrieve information. This setup will ensure that everything works together smoothly, creating a seamless user experience.
