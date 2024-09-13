@@ -24,7 +24,12 @@
 ---
 
 ## 2. SDLC Details
-
+- **Requirements**: At the start of each sprint, we will discuss what requirements we will need to focus on in order to meet our milestone. Any ideas for requirements that are not listed will be considered and added as necessary, with approval from the team.
+- **Design**: Once the requirements are set, we will look at the design specifications to understand how we will need to approach development in meeting the requirements. 
+- **Development**: As development work is done on the components, daily meetings will be held to discuss how progress is moving along as well as any challenges that we are having. Goals for the next day will be discussed and set to ensure the pace we are going at will allow us to meet the sprint's deadline. 
+- **Testing**: As components are created, we will perform various testing methodologies to ensure that they meet the listed requirements and design specifications.
+- **Deployment**: Once testing is complete and prominent bugs are patched, branches will be merged and pushed to the main branch.
+- **Review**: As the sprint comes to a close, we will reflect on everything that happened during the sprint to discuss what went well and what went wrong.
 ---
 
 ## 3. Timeline
