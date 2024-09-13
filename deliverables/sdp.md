@@ -70,3 +70,7 @@
 ### Design Specification
 
 - **Date**: End of Week 7 (10/11/24)
+
+### Gantt Chart
+
+![gantt](../assets/gantt-chart.png)
