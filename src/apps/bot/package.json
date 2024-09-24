@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "tsx watch ./index.ts",
+    "dev": "tsx watch src/index.ts",
     "start": "node dist/index.js",
-    "build": "tsup ./index.ts --minify"
+    "build": "tsup src/index.ts --minify"
   },
   "keywords": [],
   "author": "",
