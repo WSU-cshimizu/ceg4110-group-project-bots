@@ -1,6 +1,6 @@
 # Guest Lecture Response
 
-- **Guest Lecturer:** `Nick`
+- **Guest Lecturer:** `Tim Skrinak & Niclas Rue`
 - **Company:** `Dayton Freight Lines`
 - **Date:** `26 September 2024`
 
