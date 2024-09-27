@@ -3,11 +3,15 @@
 ## 1. Administrative
 ### Meeting Location(s)
 - **Physical Location**: Esports Club, Student Union, Wright State University
+    - After our CEG 4110 classtime, everybody in our group walks through the Student Union for varying purposes. Some of us are also members of the Esports Club. Having access to the clubroom, this made the most sense for us to have our weekly meetings there, migrating to other spaces in the Union or campus as needed in case of the club room being too busy or loud.  
 - **Virtual Meetings**: Discord (For remote discussions and testing)
+    - Outside of meeting in person, impromptu meetings through discord allow for us to easily share progress and ideas through its versatile interfaces and screen sharing features.
 
 ### Meeting Times
 - **Weekly Progress Meeting**: Tuesdays and Thursdays, 12:30 PM - 01:30 PM
+    - Many of our schedules have conflicts that would prevent us from meeting on most weekdays, but there is a gap in the middle of the day on Tuesday and Thursday that allows for us to host in-person meetings. While we are currently planning for one hour meetings, the size of the gap allows for additional meeting time if needed. 
 - **Ad-hoc Meetings**: Scheduled through Discord as needed.
+    - In the case of not getting to address every topic during our weekly progress meetings, discord allows for us to meet on short notice and finish discussing those topics.
 
 ### Communication Plan
 - **Weekly Meetings**:
@@ -19,7 +23,9 @@
 ### Project Management
 - **Tool**: GitHub for ticketing and task management
 - **Task Assignment**: Tasks assigned based on expertise and workload.
+    - Our group has a wide spread programming backgrounds and experiences as well as varying course-loads so tasks will be assigned accordingly.
 - **Documentation**: Maintained on Google Docs.
+    - Google Docs is easy for everyone to access and make edits from without creating conflicts.
 
 ---
 
