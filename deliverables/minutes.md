@@ -28,8 +28,8 @@ The scribe is the person taking the _notes_. This is encouraged to be a single p
 - Josh: We will probably start coding next week
 
 Flowchart and swimlane that was made this week
-![Flow Chart]('assets/flow-chart.jpg')
-![Swimlane Chart]('assets/swimlane-chart.jpg')
+![Flow Chart](../assets/flow-chart.jpg)
+![Swimlane Chart](../assets/swimlane-chart.jpg)
 
 ## Action Items
 
