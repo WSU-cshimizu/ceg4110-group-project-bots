@@ -20,7 +20,6 @@ Priority of things can vary depending on each person and sometimes people think 
 
 If a reason is provided, a "why" per se, for a requirement/feature, it is often easier for developers to figure out the little things that might go wrong or might slip through QA that others might miss.
 
-
 ## Guest 2
 
 - **Guest Lecturer:** `Todd Irlbeack `
@@ -29,16 +28,14 @@ If a reason is provided, a "why" per se, for a requirement/feature, it is often 
 
 ## Pertinent Questions
 
-- Question 1
-- Question 2
+- How can teams help developers overcome their hesitance to adopt LLMs, considering that these tools can significantly enhance workflow efficiency, especially if developers feel that using them undermines their coding skills?
+
+- What strategies can teams implement to effectively manage and resolve conflicts that arise during Agile sprints, particularly when team members have differing opinions on task priorities or implementation approaches?
 
 ## Lessons Learned
 
-Lesson 1
+- Operating efficiently and adapting quickly to changing demands is crucial in any fast-paced environment.
 
-Lesson 2
+- It’s essential to be careful about the software used and the code shared, as some tools may access the codebase. Keeping tools secure helps protect intellectual property.
 
-Lesson 3
-
-
-
+- Using a custom LLM shows how important it is to keep information private. This allows for safely using proprietary data, highlighting the need for tools that protect sensitive information.
