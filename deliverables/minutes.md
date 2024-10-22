@@ -62,3 +62,21 @@ After the notes and action items have been pushed, each person should take a tim
 - Ishan Ghimire
 - Jared Subr
 - Gani Sagiev
+
+## Meeting Minutes 10/22/2024
+
+## Agenda
+
+## Notes
+- Team works on Adapter & Façade: Structural Patterns.
+
+- Creating a diagram for our façade. Containing the user and discord.js client going into the client app as adapter. And the client app goes into the discord.js façade that can search for the commands and etc. 
+
+- Team discussed on what components are necessary to show the structural pattern for our discord bot.
+
+- Joey checks on our diagram and approves of the structure.
+
+## Action Items
+
+## Signatures
+- Gani Sagiev
