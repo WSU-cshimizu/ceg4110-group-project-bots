@@ -75,7 +75,7 @@ After the notes and action items have been pushed, each person should take a tim
 - Team discussed on what components are necessary to show the structural pattern for our discord bot.
 
 - Joey checks on our diagram and approves of the structure.
-
+![Design Pattern]()
 ## Action Items
 
 ## Signatures
