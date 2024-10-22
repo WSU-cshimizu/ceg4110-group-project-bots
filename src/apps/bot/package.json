@@ -2,15 +2,20 @@
   "name": "bot",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
+    "prestart": "npm run build",
     "start": "node dist/index.js",
-    "build": "tsup src/index.ts --minify"
+    "build": "tsup src/**/*.ts src/*.ts --format esm",
+    "preupdate-commands": "npm run build",
+    "update-commands": "node dist/util/updateCommands.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "discord.js": "^14.16.3",
     "dotenv": "^16.4.5",
     "eslint": "^9.11.1",
     "prettier": "^3.3.3"
