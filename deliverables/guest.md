@@ -50,4 +50,7 @@ If a reason is provided, a "why" per se, for a requirement/feature, it is often 
 -
 
 ## Lessons Learned
--
+- WinSupply runs multiple different methodology, Agile, Scrum, Kanban.
+- AI, ChatGPT (llm) big fixation right now. Even WinSupply trying to create solutions/products using AI.
+- AI/ChatGPT getting dumber with each iteration/release.
+
