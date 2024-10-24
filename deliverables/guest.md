@@ -39,3 +39,23 @@ If a reason is provided, a "why" per se, for a requirement/feature, it is often 
 - It’s essential to be careful about the software used and the code shared, as some tools may access the codebase. Keeping tools secure helps protect intellectual property.
 
 - Using a custom LLM shows how important it is to keep information private. This allows for safely using proprietary data, highlighting the need for tools that protect sensitive information.
+
+## Guest 3
+
+- **Guest Lecturer:** `Chris Schrameck`
+-**Company:** `Winsupply`
+-**Date:** `24 October 2024`
+
+## Pertinent Questions
+- Creating their own software instead of using big popular ones. How viable is this?
+  
+- Why are scrum and kanban the preferred agile frameworks and what does that say about the company?
+
+## Lessons Learned
+- Trend on the industry has been "how can we handle products".
+
+- Number one issue seen is the lack of communication and understanding between the buissness end (investors and corporate) and the technology end (programmers). The buisness end might want to have something done that is not necessarily within possibility or reasonability for the tech end and that leads to failiure.
+
+- Split team across 2 different time zones allows for much more efficient work hours in the day. For example, with a 10 hour time zone differnce, there will be at least one team working for almost 20 hours in a day.
+
+- Looking at technology in the long term. "How will this help us for the next 10 years" and not "how can we use this to solve a problem for tomorrow".
