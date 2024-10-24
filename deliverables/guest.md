@@ -39,3 +39,15 @@ If a reason is provided, a "why" per se, for a requirement/feature, it is often 
 - It’s essential to be careful about the software used and the code shared, as some tools may access the codebase. Keeping tools secure helps protect intellectual property.
 
 - Using a custom LLM shows how important it is to keep information private. This allows for safely using proprietary data, highlighting the need for tools that protect sensitive information.
+
+## Guest 3
+
+- **Guest Lecturer:** `Chris Schrameck`
+-**Company:** `Winsupply`
+-**Date:** `24 October 2024`
+
+## Pertinent Questions
+-
+
+## Lessons Learned
+-
