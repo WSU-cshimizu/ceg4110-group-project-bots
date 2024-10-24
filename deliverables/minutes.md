@@ -63,21 +63,30 @@ After the notes and action items have been pushed, each person should take a tim
 - Jared Subr
 - Gani Sagiev
 
-## Meeting Minutes 10/22/2024
+# Meeting Minutes (October 22nd, 2024)
 
 ## Agenda
 
+- Figure out our Design Patterns
+
 ## Notes
+
 - Team works on Adapter & Façade: Structural Patterns.
 
-- Creating a diagram for our façade. Containing the user and discord.js client going into the client app as adapter. And the client app goes into the discord.js façade that can search for the commands and etc. 
+- Creating a diagram for our façade. Containing the user and discord.js client going into the client app as adapter. And the client app goes into the discord.js façade that can search for the commands and etc.
 
 - Team discussed on what components are necessary to show the structural pattern for our discord bot.
 
 - Joey checks on our diagram and approves of the structure.
-![Design Pattern]()
-## Action Items
+
+![Design Pattern](../assets/structural-patterns.jpg)
+
+For our structural pattern, we were showing both a facade and adapter pattern. For our adapter, we are using the provided `client` object from `discord.js` that do not have a way to store commands in it. So we created a new interface that extends `client` called `ClientApp` that has the commands variable attached to it. This is so that when we pass around the client (which we will be doing quite a lot), we do not need to pass another parameter only for the commands that the client has because it's already in the object.
+
+For the facade, we are basically showing that we are abstracting the utilities that are provided by `discord.js` and the end user only has to interact with our bot client, but behind the scenes, there are a lot more things that the `client` that are doing, and even more behind, there are a lot of things that `discord.js` that is doing for us.
 
 ## Signatures
+
 - Gani Sagiev
 - Jared Subr
+- Joshua Quaintance
