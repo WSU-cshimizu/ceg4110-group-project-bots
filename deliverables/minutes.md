@@ -80,3 +80,4 @@ After the notes and action items have been pushed, each person should take a tim
 
 ## Signatures
 - Gani Sagiev
+- Jared Subr
