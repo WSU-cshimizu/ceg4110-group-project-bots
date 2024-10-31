@@ -102,7 +102,9 @@ For the facade, we are basically showing that we are abstracting the utilities t
 
 - Team works together discussing the desired formatting for the webpages, using Mee6 bot as inspiration.
 
-- Jared drew out a rough sketch of the webpages, annotating each part of the drawing to further explain how we will approach the designs. 
+- Jared drew out a rough sketch of the webpages, annotating each part of the drawing to further explain how we will approach the designs.
+
+![WebpageDraft](../assets/WebpageRoughDraft.jpg)
 
 - Ideas were bounced back and forth about what to include in the webpage. Mee6 is mentioned but we make sure to only borrow ideas in order to establish our design approach as our own ideas an not an act of plaigarism.
 
