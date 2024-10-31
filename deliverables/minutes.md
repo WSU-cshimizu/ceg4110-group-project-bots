@@ -91,3 +91,21 @@ For the facade, we are basically showing that we are abstracting the utilities t
 - Jared Subr
 - Joshua Quaintance
 - Ishan Ghimire
+
+# Meeting Minutes (October 31st, 2024)
+
+## Agenda
+
+- Refining ideas and designs for the landing and bot management web pages
+
+## Notes
+
+- Team works together discussing the desired formatting for the webpages, using Mee6 bot as inspiration.
+
+- Jared drew out a rough sketch of the webpages, annotating each part of the drawing to further explain how we will approach the designs. 
+
+- Ideas were bounced back and forth about what to include in the webpage. Mee6 is mentioned but we make sure to only borrow ideas in order to establish our design approach as our own ideas an not an act of plaigarism.
+
+## Signatures
+
+-Jared Subr
