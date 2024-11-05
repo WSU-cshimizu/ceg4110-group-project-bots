@@ -116,20 +116,27 @@ For the facade, we are basically showing that we are abstracting the utilities t
 ## Meeting Minutes (November 05 2024)
 
 ## Agenda
-- Refine/create UI interface 
+
+- Refine/create UI interface
+
 ## Notes
-- Team does not currently have a UI implemented. 
+
+- Team does not currently have a UI implemented.
 - Helped another group check out their UI and give feedback
 - Written 3 reports on bad UI design from existing softwares/websites.
+
 ## Action Items
+
 - Workday
-`Workday website has a job application page in which they request a PDF of your resume then ask you to fill in their fields on your experience, school, and etc. It defeats the whole point of submitting a Resume and on top of the the application on their website must be filled out for each job application. So if you apply for 5 jobs, you must fill out their fields for education and such 5 times. This is a horrible UI experience for users. This would make users end up using other job search websites.`
+  `Workday website has a job application page in which they request a PDF of your resume then ask you to fill in their fields on your experience, school, and etc. It defeats the whole point of submitting a Resume and on top of the the application on their website must be filled out for each job application. So if you apply for 5 jobs, you must fill out their fields for education and such 5 times. This is a horrible UI experience for users. This would make users end up using other job search websites.`
 
 - Microsoft Teams
-`Microsoft Teams chat room is quoted as “communication software that simultaneously misses the mark on chat room experiences and discourages comminucation. It just doesn’t feel welcoming”. The sidebar navigation includes both Teams and Chat options which is confusing since both are used for chatting. In Teams there is no clear hierarchy between headers and the channelds they contain. There is simply too much information packed into the sidebars and the interface as a whole. Users also have limited control over customizing their workspace layout and a bigger issue no way of prioritizing the most frequently used sections. You cannot add tags or rename channels for your own benefit.`
+  `Microsoft Teams chat room is quoted as “communication software that simultaneously misses the mark on chat room experiences and discourages comminucation. It just doesn’t feel welcoming”. The sidebar navigation includes both Teams and Chat options which is confusing since both are used for chatting. In Teams there is no clear hierarchy between headers and the channelds they contain. There is simply too much information packed into the sidebars and the interface as a whole. Users also have limited control over customizing their workspace layout and a bigger issue no way of prioritizing the most frequently used sections. You cannot add tags or rename channels for your own benefit.`
 
 - Outlook
-`The outlook email platform has an overload on features and buttons. The company tries to pack too much onto the screen at once that could overwhelm users. Especially those who are new to the platform. They mix in the email, calendar, task and contacts all into one platform. It makes navigating more complicated then need be. The navigation between the sections themselves is also not as smooth as it could be. And some actions are hidden away behind menus and icons that aren’t immediately clear. I myself had to google where certain buttons and features are. The design needs to be drastically simplified or the different sections need to be put into separate applications that can integrate.`
+  `The outlook email platform has an overload on features and buttons. The company tries to pack too much onto the screen at once that could overwhelm users. Especially those who are new to the platform. They mix in the email, calendar, task and contacts all into one platform. It makes navigating more complicated then need be. The navigation between the sections themselves is also not as smooth as it could be. And some actions are hidden away behind menus and icons that aren’t immediately clear. I myself had to google where certain buttons and features are. The design needs to be drastically simplified or the different sections need to be put into separate applications that can integrate.`
 
 ## Signatures
+
 - Gani Sagiev
+- Ishan Ghimire
