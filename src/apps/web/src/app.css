@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes colorChange {
+    0% {
+        color: #86ffa0;
+        text-shadow: 1px 0 10px rgb(148, 238, 196), 1px 0 30px #86ffa0;
+    }
+    50% {
+        color: #f48fd2;
+        text-shadow: 1px 0 10px rgb(255, 194, 237), 1px 0 30px #f48fd2;
+    }
+    100% {
+        color: #86ffa0;
+        text-shadow: 1px 0 10px rgb(148, 238, 196), 1px 0 30px #86ffa0;
+    }
+}
+
