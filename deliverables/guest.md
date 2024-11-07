@@ -59,3 +59,18 @@ If a reason is provided, a "why" per se, for a requirement/feature, it is often 
 - Number one issue seen is the lack of communication and understanding between the buissness end (investors and corporate) and the technology end (programmers). The buisness end might want to have something done that is not necessarily within possibility or reasonability for the tech end and that leads to failiure.
 - Split team across 2 different time zones allows for much more efficient work hours in the day. For example, with a 10 hour time zone differnce, there will be at least one team working for almost 20 hours in a day.
 - Looking at technology in the long term. "How will this help us for the next 10 years" and not "how can we use this to solve a problem for tomorrow".
+
+## Guest 3
+
+- **Guest Lecturer:** `Leland Vakarian`
+- **Company:** `MITRE`
+- **Date:** `07 November 2024`
+
+## Pertinent Questions
+- what is your role in MITRE?
+
+- Do you use your own programs or get the applications and such from outside sources?
+
+## Lessons Learned
+- Everything you need to learn to be a full-stack developer has potentially grown.
+- if the company wants to teach you something, let them. Try different things and different paradigms.
