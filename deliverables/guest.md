@@ -43,8 +43,8 @@ If a reason is provided, a "why" per se, for a requirement/feature, it is often 
 ## Guest 3
 
 - **Guest Lecturer:** `Chris Schrameck`
--**Company:** `Winsupply`
--**Date:** `24 October 2024`
+- **Company:** `Winsupply`
+- **Date:** `24 October 2024`
 
 ## Pertinent Questions
 - Creating their own software instead of using big popular ones. How viable is this?
