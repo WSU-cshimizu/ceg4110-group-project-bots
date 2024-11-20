@@ -4,8 +4,11 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "predev": "npm run build",
+    "dev": "npm run dev:update && npm run dev:watch",
     "prestart": "npm run build",
+    "dev:watch": "tsx watch src/index.ts",
+    "dev:update": "node dist/util/updateCommands.js",
     "start": "node dist/index.js",
     "build": "tsup src/**/*.ts src/*.ts --format esm",
     "preupdate-commands": "npm run build",
