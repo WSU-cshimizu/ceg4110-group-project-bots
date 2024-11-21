@@ -18,15 +18,22 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "discord.js": "^14.16.3",
     "dotenv": "^16.4.5",
+<<<<<<< Updated upstream
     "eslint": "^9.11.1",
+=======
+    "eslint": "^9.14.0",
+>>>>>>> Stashed changes
     "express": "^4.21.1",
     "prettier": "^3.3.3"
   },
   "devDependencies": {
-    "tsup": "^8.3.0",
-    "tsx": "^4.19.1",
-    "typescript": "^5.6.2"
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
   }
 }

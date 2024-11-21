@@ -12,19 +12,26 @@ import 'dotenv/config';
 import { Events, GatewayIntentBits, Client, Partials } from 'discord.js';
 import { ClientApp } from './types';
 import loadCommands from './util/loadCommands';
+import { createServer } from './api';
 
 const DISCORD_TOKEN = process.env.BOT_TOKEN;
+const SERVER_PORT = process.env.PORT || 5175;
+
 
 const client: ClientApp = new Client({
-  intents: [
-    GatewayIntentBits.Guilds,
-    GatewayIntentBits.MessageContent,
-    GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.GuildMembers,
-    GatewayIntentBits.GuildPresences
-  ],
-  partials: [Partials.Channel, Partials.Message]
-});
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.GuildMembers,
+        GatewayIntentBits.GuildPresences
+    ],
+    partials: [
+        Partials.Channel, Partials.Message
+    ]
+})
+const app = createServer(client);
+
 
 await loadCommands(client);
 
@@ -49,3 +56,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 });
 
 client.login(DISCORD_TOKEN);
+
+app.listen(SERVER_PORT, () => {
+    console.log(`[server]: Server is running at http://localhost:${SERVER_PORT}`);
+});
