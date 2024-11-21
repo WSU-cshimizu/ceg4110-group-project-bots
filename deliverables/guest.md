@@ -74,3 +74,5 @@ If a reason is provided, a "why" per se, for a requirement/feature, it is often 
 ## Lessons Learned
 - Everything you need to learn to be a full-stack developer has potentially grown.
 - if the company wants to teach you something, let them. Try different things and different paradigms.
+- Do not get attatched to your project and treat it like a pet. If it is not working, scrap it and move on.
+- Do not be afraid to hop jobs early to get a broader experience of how different places operate. Helps down the line.
