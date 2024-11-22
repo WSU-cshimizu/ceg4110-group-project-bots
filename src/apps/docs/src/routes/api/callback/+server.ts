@@ -1,6 +1,5 @@
-import { BOT_TOKEN, CLIENT_ID } from "$env/static/private";
+import { BOT_TOKEN, CLIENT_ID, CLIENT_SECRET } from "$env/static/private";
 import { json } from "@sveltejs/kit";
-
 
 export async function GET(req: any, res: any) {
     const code = req.url.searchParams.get('code');
@@ -8,7 +7,7 @@ export async function GET(req: any, res: any) {
         method: 'POST',
         body: new URLSearchParams({
             'client_id': CLIENT_ID,
-            'client_secret': BOT_TOKEN,
+            'client_secret': CLIENT_SECRET,
             'grant_type': 'authorization_code',
             'redirect_uri': 'http://localhost:5170/api/callback',
             'code': code,
@@ -18,13 +17,31 @@ export async function GET(req: any, res: any) {
         {
             'Content-Type': 'application/x-www-form-urlencoded'
         }
-
     })
 
-    const data = await response.json()
+    const data = (await response.json())
+    const tokens = `${data.token_type} ${data.access_token}`
+    /** Currently commented, but this is how you would get the information about the user
+    const getUserInfo = await fetch('https://discord.com/api/users/@me', {
+        headers: {
+            authorization: tokens
+        }
+    })
+    const userInfo = await getUserInfo.json();
+    */
 
-    console.log('data', data);
+    const getGuilds = await fetch('https://discord.com/api/users/@me/guilds', {
+        headers: {
+            authorization: tokens
+        }
+    });
 
+    let userGuilds = await getGuilds.json()
 
-    return JSON.stringify(data)
+    // Filter out to only guilds that the user has admin perms on
+    // Since admin permissions are just 3 bit shifts, doing the opposite
+    // and then check if is equal to 0 will check if they have the permission
+    userGuilds = userGuilds.filter((guild: { permissions: number }) => 3 >> guild.permissions === 0)
+
+    return json(userGuilds)
 }
