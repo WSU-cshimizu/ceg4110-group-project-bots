@@ -9,3 +9,7 @@
 <form method="POST" action="?/ping">
 	<button type="submit">Ping Server</button>
 </form>
+
+<form method="POST" action="?/login">
+	<button type="submit">Login</button>
+</form>

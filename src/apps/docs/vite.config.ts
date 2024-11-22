@@ -10,5 +10,8 @@ export default defineConfig({
 		commonjsOptions: {
 			include: [/@repo-ui/, /node_modules/]
 		}
+	},
+	server: {
+		port: 5170
 	}
 });

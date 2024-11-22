@@ -1,4 +1,5 @@
-import { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder } from 'discord.js';
+import { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, Guild, GuildBasedChannel, GuildMember } from 'discord.js';
+import { ClientApp } from '../types';
 
 export default {
   data: new SlashCommandBuilder()
@@ -41,5 +42,35 @@ export default {
         ephemeral: true
       });
     }
+  },
+  async apiExecute(client: ClientApp, { guildId, userId, channelId, message }) {
+    let guild: Guild | null = null,
+      channel: GuildBasedChannel | null = null,
+      user: GuildMember | null = null;
+
+    try {
+      guild = await client.guilds.fetch(guildId)
+      channel = await guild?.channels.fetch(channelId);
+      user = await guild?.members.fetch(userId);
+
+      const announcementEmbed = new EmbedBuilder()
+        .setColor('#ffcc00')
+        .setTitle('🚨 **Announcement** 🚨')
+        .setDescription(message)
+        .setTimestamp()
+        .setFooter({
+          text: `Announcement from ${user.user.tag}`,
+          iconURL: user?.displayAvatarURL()
+        });
+
+      if (channel?.isSendable()) channel.send({ embeds: [announcementEmbed] });
+
+    } catch (err) {
+      if (!guild || !channel || !user) {
+        throw new Error("Invalid GuildID, UserId, or ChannelId", {
+          cause: 'invalid-input-id'
+        });
+      }
+    }
   }
-};
+}
