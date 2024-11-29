@@ -1,9 +1,10 @@
 <script>
-    import "/src/app.css";
+    import "../app.css";
     import { page } from "$app/stores";
 </script>
 
-<style>
+
+<style lang="postcss">
     html, body {
         height: 100%;
         margin: 0;
@@ -25,7 +26,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.5); 
+        background-color: rgba(0, 0, 0, 1);
         padding: 15px 20px;
         display: flex;
         align-items: center;

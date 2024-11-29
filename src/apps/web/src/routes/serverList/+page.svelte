@@ -25,25 +25,31 @@
     body {
         background-color: #1a237e;
         display: flex;
-        justify-content: center; 
+        justify-content: center;
         align-items: center;    
         height: 100vh;    
         margin: 0;
     }
 
     .content-wrapper {
-        background-color: rgba(0, 0, 0, 0.5); 
-        border-radius: 15px;  
-        padding: 300px;   
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        padding: 10vh 10vw;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         text-align: center;
+        width: 80%;
+        transform: translateY(-50%)
+        position: relative;
+        top: 50%;
+        margin: auto;
+        height: 100%;
     }
 
     .title {
         color: white;
         font-size: 100px;
         font-family: Arial, sans-serif;
-        margin-bottom: 20px; 
+        margin-bottom: 20px;
         text-shadow: 1px 0 10px white, 1px 0 30px #76ff03;
         animation: colorChange 20s infinite alternate;
     }
@@ -106,4 +112,3 @@
         {/each}
     </div>
 </div>
-

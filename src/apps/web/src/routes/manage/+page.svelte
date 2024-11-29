@@ -24,17 +24,14 @@
         ]
         }
     ];
+    let activeTab = null; // Track the active tab index
 
-    let openTabs = [];
-
+    // Toggle the active tab index
     function toggleTab(index) {
-        if (openTabs.includes(index)) {
-        openTabs = openTabs.filter(i => i !== index);
-        } else {
-        openTabs.push(index);
-        }
+        activeTab = activeTab === index ? null : index; // Toggle the tab: if it's already active, close it
     }
 
+    // Toggle the mode of the item
     function toggleMode(item) {
         item.mode = item.mode === "add" ? "manage" : "add";
     }
@@ -53,18 +50,22 @@
     .content-wrapper {
         background-color: rgba(0, 0, 0, 0.5);
         border-radius: 15px;
-        padding: 100px;
+        padding: 10vh 10vw;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         text-align: center;
         width: 80%;
-        max-width: 800px;
+        transform: translateY(-50%)
+        position: relative;
+        top: 50%;
+        margin: auto;
+        height: 100%;
     }
 
     .title {
         color: white;
         font-size: 100px;
         font-family: Arial, sans-serif;
-        margin-bottom: 20px; 
+        margin-bottom: 20px;
         text-shadow: 1px 0 10px white, 1px 0 30px #76ff03;
         animation: colorChange 20s infinite alternate;
     }
@@ -152,7 +153,8 @@
             <div class="tab" on:click={() => toggleTab(tabIndex)}>
                 {tab.name}
             </div>
-            <div class="tab-content {openTabs.includes(tabIndex) ? 'open' : ''}">
+            <!-- Only show tab content if it’s the active tab -->
+            <div class="tab-content {activeTab === tabIndex ? 'open' : ''}">
                 {#each tab.content as item}
                     <div class="box">
                         <p class="function-name" style="color: white">{item.functionName}</p>
