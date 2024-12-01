@@ -8,8 +8,28 @@ const commandsList: IAllCommand[] = [
     description: 'Displays information about the bot'
   },
   {
-    name: 'announce',
-    description: 'Send an announcement to the channel'
+    name: 'help',
+    description: 'Displays all available commands'
+  },
+  {
+    name: 'serverinfo',
+    description: 'Displays information about the server'
+  },
+  {
+    name: 'ping',
+    description: "Check the bot's latency"
+  },
+  {
+    name: 'ban',
+    description: 'Ban a member from the server'
+  },
+  {
+    name: 'kick',
+    description: 'Kicks a member from the server'
+  },
+  {
+    name: 'timeout',
+    description: 'Timeouts a member from the server'
   },
   {
     name: 'head-tails',
@@ -20,12 +40,12 @@ const commandsList: IAllCommand[] = [
     description: 'Creates a poll with multiple options'
   },
   {
-    name: 'ping',
-    description: "Check the bot's latency"
+    name: 'announce',
+    description: 'Send an announcement to the channel'
   },
   {
-    name: 'server-info',
-    description: 'Displays information about the server'
+    name: 'pet',
+    description: 'Manage your pet with commands like feed, play, and status'
   }
 ];
 
