@@ -45,6 +45,8 @@ Server moderators should be able to configure the bot through a user-friendly, r
 - Each section should have distinct visual elements and proper labeling to guide users in configuring the bot. Also, sidebar tabs must have proper icons for better UX.
 - Ensure that navigation between different sections is fast, and no full-page reload is needed (use SPA).
 
+![WebpageDraft](../assets/WebpageRoughDraft.jpg)
+
 ---
 
 ### Requirement 4: Command Help Guide
@@ -59,3 +61,6 @@ Server moderators and end-users should have access to a help guide for all avail
 - The help command output should show descriptions and usage examples for each command available to the user.
 - On the admin website, provide a dedicated "Help Guide" tab that lists all bot commands.
 - Each command in the table should have a description, required permissions, and examples of how to use it.
+
+![FlowchartDesign](../assets/flow-chart.jpg)
+![StructuralPattern](../assets/structural-patterns.jpg)
