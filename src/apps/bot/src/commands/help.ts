@@ -46,6 +46,14 @@ const commandsList: IAllCommand[] = [
   {
     name: 'pet',
     description: 'Manage your pet with commands like feed, play, and status'
+  },
+  {
+    name: 'news',
+    description: 'Displays the latest news for a specific game'
+  },
+  {
+    name: 'tournaments',
+    description: 'Displays upcoming tournaments for a specific esports game'
   }
 ];
 

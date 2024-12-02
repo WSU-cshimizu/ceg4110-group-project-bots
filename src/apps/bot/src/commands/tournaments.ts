@@ -11,7 +11,7 @@ const options = {
 
 export default {
   data: new SlashCommandBuilder()
-    .setName('tournament')
+    .setName('tournaments')
     .setDescription('Get upcoming tournaments for a specific esports game')
     .addStringOption((option) =>
       option

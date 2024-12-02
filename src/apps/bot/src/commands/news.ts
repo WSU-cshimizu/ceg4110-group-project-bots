@@ -1,7 +1,5 @@
 import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
 
-import 'dotenv/config';
-
 const apiKey = process.env.NEWS_API_KEY;
 
 export default {
@@ -19,18 +17,19 @@ export default {
     const gameName = interaction.options.getString('game');
 
     try {
+      await interaction.deferReply();
+
       const response = await fetch(
-        `https://newsapi.org/v2/top-headlines?q=${encodeURIComponent(gameName)}&sortBy=publishedAt&language=en&apiKey=${apiKey}`
+        `https://serpapi.com/search.json?engine=google_news&q=${encodeURIComponent(gameName)}&gl=us&hl=en&api_key=${apiKey}`
       );
 
       const data = await response.json();
 
-      const articles = data.articles.slice(0, 5);
+      const articles = data.news_results;
 
-      if (articles.length === 0) {
-        await interaction.reply({
-          content: `No news found for the game: ${gameName}.`,
-          ephemeral: true
+      if (!articles || articles.length === 0) {
+        await interaction.editReply({
+          content: `No news found for the game: ${gameName}.`
         });
         return;
       }
@@ -38,21 +37,20 @@ export default {
       const embed = new EmbedBuilder()
         .setTitle(`Latest News about ${gameName}`)
         .setColor('#0099ff')
-        .setFooter({ text: 'Data powered by NewsAPI' });
+        .setFooter({ text: 'Data powered by SerpAPI' });
 
-      articles.forEach((article) => {
+      articles.slice(0, 5).forEach((article) => {
         embed.addFields({
           name: article.title,
-          value: `[Read More](${article.url})`
+          value: `[Read More](${article.link})`
         });
       });
 
-      await interaction.reply({ embeds: [embed] });
+      await interaction.editReply({ embeds: [embed] });
     } catch (error) {
       console.error('Error fetching news:', error);
-      await interaction.reply({
-        content: 'Failed to fetch news. Please try again later.',
-        ephemeral: true
+      await interaction.editReply({
+        content: 'Failed to fetch news. Please try again later.'
       });
     }
   }
