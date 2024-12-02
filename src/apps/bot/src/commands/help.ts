@@ -28,6 +28,14 @@ const commandsList: IAllCommand[] = [
     description: 'Kicks a member from the server'
   },
   {
+    name: 'assignrole',
+    description: 'Assigns a role to a member in the server'
+  },
+  {
+    name: 'removerole',
+    description: 'Removes a role from a member in the server'
+  },
+  {
     name: 'timeout',
     description: 'Timeouts a member from the server'
   },
