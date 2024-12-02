@@ -112,6 +112,7 @@ For the facade, we are basically showing that we are abstracting the utilities t
 
 - Jared Subr
 - Ishan Ghimire
+- Joshua Quaintance
 
 ## Meeting Minutes (November 05 2024)
 
@@ -177,6 +178,7 @@ For the facade, we are basically showing that we are abstracting the utilities t
 ### Signatures
 
 - Ishan Ghimire
+- Joshua Quaintance
 
 ---
 
@@ -205,6 +207,7 @@ For the facade, we are basically showing that we are abstracting the utilities t
 ### Signatures
 
 - Ishan Ghimire
+- Joshua Quaintance
 
 ---
 
@@ -242,6 +245,7 @@ For the facade, we are basically showing that we are abstracting the utilities t
 ### Signatures
 
 - Ishan Ghimire
+- Joshua Quaintance
 
 ---
 
@@ -277,3 +281,4 @@ For the facade, we are basically showing that we are abstracting the utilities t
 ### Signatures
 
 - Ishan Ghimire
+- Joshua Quaintance
