@@ -141,3 +141,139 @@ For the facade, we are basically showing that we are abstracting the utilities t
 - Gani Sagiev
 - Ishan Ghimire
 - Joshua Quaintance
+
+## Meeting Minutes (November 07, 2024)
+
+### Agenda
+
+- Plan and prioritize remaining features for the Discord bot.
+- Decide whether to include custom features like custom commands and messages.
+
+### Notes
+
+**Josh**: "Custom commands are a good-to-have feature, but they add a lot of complexity. Discord.js doesn't support them directly, and we'd need to work around it."
+
+**Jared**: "I think sticking to core features will help us finish on time. Let's avoid custom commands for now."
+
+**Ishan**: "Agreed. Adding custom messages also doesn't align well with what we can realistically implement right now."
+
+**Decision**: The team unanimously decided not to implement custom features like custom commands and messages, focusing instead on core bot functionalities.
+
+**Jared**: "I set up a new SvelteKit repo locally and added some basic UI changes."
+
+**Josh**: "We could replace the current repo with this new template, but we should keep dependencies like `package.json` intact."
+
+**Ishan**: "I think replacing the repo might cause dependency issues. Let's avoid a complete replacement."
+
+**Gani**: "How about we only replace the necessary files instead of the entire setup? That way, we keep things stable."
+
+![CommandList](../assets/commands-list.jpg)
+
+### Action Items
+
+- Jared will refine the SvelteKit repo based on team feedback.
+- Josh will ensure dependency files remain intact if the template changes are applied.
+
+### Signatures
+
+- Ishan Ghimire
+
+---
+
+## Meeting Minutes (November 14, 2024)
+
+### Agenda
+
+- REST API initialization and server setup for sending requests.
+- Discussion on challenges with custom command implementation.
+
+### Notes
+
+**Josh**: "We're going to need a server to handle requests between the bot and the systems it's interacting with. I've added Express.js to the project for this."
+
+**Ishan**: "Implementing custom commands is proving to be difficult. Discord.js doesn't have built-in support for them, and creating them dynamically would be complicated."
+
+**Jared**: "Yeah, and the front-end part would be tricky too. We'd need to let users configure the commands dynamically."
+
+**Decision**: The team reiterated their decision to exclude custom commands and messages to keep the project focused and manageable.
+
+### Action Items
+
+- Josh will set up the REST API using Express.js.
+- The team will continue developing the bot's core functionalities.
+
+### Signatures
+
+- Ishan Ghimire
+
+---
+
+## Meeting Minutes (November 19, 2024)
+
+### Agenda
+
+- Discuss commands to implement based on requirements.
+- Review Discord OAuth implementation.
+
+### Notes
+
+**Ishan**: "I'm working on basic commands like `server-info` and `about`. They should be straightforward to implement."
+
+**Jared**: "We should also have a help command to list all the bot's available commands. It would be really useful for admins."
+
+**Josh**: "Good idea. We can loop through the commands dynamically and display them when the help command is triggered."
+
+**Gani**: "Let's add a fun command too, like a coin flip game. It could make the bot more engaging."
+
+**Ishan**: "I like that idea. I'll work on the coin flip command and push the changes soon."
+
+**Gani**: "How about adding eSports-related commands to get a list of tournaments? It would fit well with the Esports Club."
+
+**Ishan**: "Yeah, we can implement it. We'll need a third-party API to provide data. Maybe something like PandaScore offers it? I'll look into it."
+
+### Action Items
+
+- Ishan to finalize and push basic commands.
+- Jared to work on the help command functionality.
+- Josh to support by ensuring dynamic command listing.
+- Gani to assist with testing commands.
+- Ishan to research third-party APIs like PandaScore for eSports tournament data.
+
+### Signatures
+
+- Ishan Ghimire
+
+---
+
+## Meeting Minutes (November 23, 2024)
+
+### Agenda
+
+- Preview Discord OAuth implementation.
+- Discuss moderation commands like `/ban` and `/kick`.
+
+### Notes
+
+**Josh**: "I finished the OAuth implementation. Here's a quick demo of how it redirects users back to the website after they authenticate."
+
+**Gani**: "What's the difference between the client secret and the bot token? Are they interchangeable?"
+
+**Josh**: "No, the client secret is specific to the OAuth application. It must be sent in the request body, while the bot token is for authentication between the bot and Discord."
+
+**Jared**: "What about the redirect URI? How do we handle that?"
+
+**Ishan**: "The redirect URI is where users are sent back after authenticating. It needs to be included in our environment configuration along with the client secret."
+
+**Jared**: "What's the progress on moderation commands?"
+
+**Ishan**: "I've been working on `/ban` and `/kick` commands. They should be ready by the end of the week."
+
+### Action Items
+
+- Josh to refine OAuth implementation.
+- Ishan to complete and push moderation commands.
+- Jared and Gani to test OAuth flow and work on FE accordingly.
+
+### Signatures
+
+- Ishan Ghimire
