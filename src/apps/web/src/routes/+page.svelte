@@ -1,89 +1,34 @@
-<script>
-  import { page } from "$app/stores";
+<script lang="ts">
+  import { actions } from './+page.server'; // Make sure actions are imported correctly.
+
+  // The function that handles the login
+  const loginToDiscord = async () => {
+    // Initiate the OAuth login flow
+    window.location.href = `https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&response_type=code&redirect_uri=YOUR_REDIRECT_URI&scope=identify+guilds`;
+  };
 </script>
 
-<style>
-  :global(body) {
-    background-color: #1a237e;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-
-  .background-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Full height */
-    width: 100vw; /* Full width */
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
-    background-image: linear-gradient(to top right, rgba(102, 187, 106, 0.6), rgba(244, 143, 177, 0.6)),
-      url('https://www.beautifulworld.com/wp-content/uploads/2016/09/Aurora-borealis-1.jpg');
-  }
-
-  .header-container {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 2rem; /* Responsive padding */
-    border-radius: 1.25rem;
-    text-align: center;
-    width: 90%; /* Ensure responsiveness */
-    max-width: 40rem; /* Limit width */
-  }
-
-  h1 {
-    color: #f1f8e9;
-    font-family: Arial, sans-serif;
-    font-size: clamp(2rem, 10vw, 6rem); /* Responsive font size */
-    text-shadow: 1px 0 10px white, 1px 0 30px #76ff03;
-    margin: 0;
-  }
-
-  p {
-    color: white;
-    font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
-    font-family: Arial, sans-serif;
-    text-shadow: 1px 0 10px white, 1px 0 30px black;
-    margin: 1rem 0;
-  }
-
-  button {
-    color: #f1f8e9;
-    border-radius: 0.9375rem;
-    background-color: rgba(0, 0, 0, 0.75);
-    padding: 1rem 1.5rem;
-    border: none;
-    outline: none;
-    font-family: Arial, sans-serif;
-    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Responsive font size */
-    text-shadow: 1px 0 10px white, 1px 0 30px #76ff03;
-    margin-top: 1rem;
-    cursor: pointer;
-    transition: transform 0.2s ease, text-shadow 0.2s ease, color 0.2s ease;
-  }
-
-  button:hover {
-    color: rgb(255, 194, 237);
-    text-shadow: 1px 0 10px white, 1px 0 30px #f48fd2;
-  }
-</style>
-
-<div class="background-container">
-  <div class="header-container">
-    <h1>Welcome</h1>
-    <p>
-      Borealis Bot is an all-in-one discord bot made to add some extra flair to your servers. It's reliable, fast, and
-      easy to use, perfect for any server getting started!
-    </p>
-    <div>
-      <a href="serverList">
-        <button>Add to Discord</button>
-      </a>
+<div class="flex items-center justify-center h-screen bg-indigo-900">
+  <div
+    class="relative flex flex-col items-center justify-center h-screen w-screen bg-cover bg-center bg-blend-overlay"
+    style="background-image: linear-gradient(to top right, rgba(102, 187, 106, 0.6), rgba(244, 143, 177, 0.6)), url('https://www.beautifulworld.com/wp-content/uploads/2016/09/Aurora-borealis-1.jpg');"
+  >
+    <div class="bg-black bg-opacity-75 p-8 rounded-xl text-center w-11/12 max-w-2xl">
+      <h1 class="text-green-100 text-4xl md:text-6xl font-sans font-bold drop-shadow-lg">
+        Welcome
+      </h1>
+      <p class="text-white mt-4 text-lg md:text-xl font-sans drop-shadow-lg">
+        Borealis Bot is an all-in-one discord bot made to add some extra flair to your servers. 
+        It's reliable, fast, and easy to use. Perfect for any server getting started!
+      </p>
+      <div class="mt-6">
+        <button
+          on:click={loginToDiscord}
+          class="text-green-100 bg-black bg-opacity-75 px-6 py-3 rounded-lg text-xl md:text-2xl font-sans font-bold transition transform hover:scale-105 hover:text-pink-200 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]"
+        >
+          Login to Discord
+        </button>
+      </div>
     </div>
   </div>
 </div>

@@ -1,34 +1,42 @@
 <script>
     import "/src/app.css";
     import { page } from "$app/stores";
+
     let tabs = [
         {
-        name: "Tab 1",
-        content: [
-            { functionName: "Function 1", description: "Description of Function 1", mode: "add" },
-            { functionName: "Function 2", description: "Description of Function 2", mode: "manage" }
-        ]
+            name: "Tab 1",
+            content: [
+                { functionName: "Function 1", description: "Description of Function 1", mode: "add" },
+                { functionName: "Function 2", description: "Description of Function 2", mode: "manage" }
+            ]
         },
         {
-        name: "Tab 2",
-        content: [
-            { functionName: "Function 3", description: "Description of Function 3", mode: "add" },
-            { functionName: "Function 4", description: "Description of Function 4", mode: "manage" }
-        ]
+            name: "Tab 2",
+            content: [
+                { functionName: "Function 3", description: "Description of Function 3", mode: "add" },
+                { functionName: "Function 4", description: "Description of Function 4", mode: "manage" }
+            ]
         },
         {
-        name: "Tab 3",
-        content: [
-            { functionName: "Function 5", description: "Description of Function 5", mode: "add" },
-            { functionName: "Function 6", description: "Description of Function 6", mode: "manage" }
-        ]
+            name: "Tab 3",
+            content: [
+                { functionName: "Function 5", description: "Description of Function 5", mode: "add" },
+                { functionName: "Function 6", description: "Description of Function 6", mode: "manage" }
+            ]
         }
     ];
-    let activeTab = null; // Track the active tab index
+
+    let activeTabs = []; // Track the indices of open tabs
 
     // Toggle the active tab index
     function toggleTab(index) {
-        activeTab = activeTab === index ? null : index; // Toggle the tab: if it's already active, close it
+        if (activeTabs.includes(index)) {
+            // If the tab is already open, close it
+            activeTabs = activeTabs.filter((i) => i !== index);
+        } else {
+            // Otherwise, add it to the open tabs
+            activeTabs = [...activeTabs, index];
+        }
     }
 
     // Toggle the mode of the item
@@ -37,134 +45,48 @@
     }
 </script>
 
-<style>
-    body {
-        background-color: #1a237e;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
+<div class="min-h-screen flex items-center justify-center bg-black/50">
+    <!-- Back to Server List Button outside the black box -->
+    {#if $page.url.pathname === '/manage'}
+        <a href="/serverList">
+            <button class="absolute left-4 top-4 text-green-100 bg-transparent border-none outline-none font-sans text-4xl cursor-pointer hover:text-pink-300 transition-colors z-20">
+                Back to server list
+            </button>
+        </a>
+    {/if}
 
-    .content-wrapper {
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 15px;
-        padding: 10vh 10vw;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        width: 80%;
-        transform: translateY(-50%)
-        position: relative;
-        top: 50%;
-        margin: auto;
-        height: 100%;
-    }
-
-    .title {
-        color: white;
-        font-size: 100px;
-        font-family: Arial, sans-serif;
-        margin-bottom: 20px;
-        text-shadow: 1px 0 10px white, 1px 0 30px #76ff03;
-        animation: colorChange 20s infinite alternate;
-    }
-
-    .tabs {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .tab {
-        font-family: Arial;
-        background-color: #69f0ae;
-        color: black;
-        padding: 15px;
-        border-radius: 10px;
-        cursor: pointer;
-        text-align: left;
-        font-size: 20px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        transition: background-color 0.3s ease;
-    }
-
-    .tab:hover {
-        background-color: rgb(255, 194, 237);
-    }
-
-    .tab-content {
-        display: none;
-        margin-top: 10px;
-        background-color: #69f0ae;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .tab-content.open {
-        display: block;
-    }
-
-    .box {
-        background-color: black;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        margin-top: 10px;
-        text-align: center;
-    }
-
-    .function-name {
-        font-family: Arial;
-        font-size: 18px;
-        color: #333;
-        margin: 10px 0;
-    }
-
-    .description {
-        font-family: Arial;
-        font-size: 14px;
-        color: #666;
-    }
-
-    .button {
-        color: black;
-        border-radius: 15px;
-        background-color: #69f0ae;
-        padding: 10px 20px;
-        border: none;
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        margin-top: 10px;
-    }
-
-    .button:hover {
-        background-color: rgb(255, 194, 237);
-    }
-</style>
-
-<div class="content-wrapper">
-    <div class="title">Server Name</div>
-    <div class="tabs">
-        {#each tabs as tab, tabIndex}
-            <div class="tab" on:click={() => toggleTab(tabIndex)}>
-                {tab.name}
-            </div>
-            <!-- Only show tab content if it’s the active tab -->
-            <div class="tab-content {activeTab === tabIndex ? 'open' : ''}">
-                {#each tab.content as item}
-                    <div class="box">
-                        <p class="function-name" style="color: white">{item.functionName}</p>
-                        <p class="description" style="color: white">{item.description}</p>
-                        <button class="button" on:click={() => toggleMode(item)}>
-                            {item.mode === "add" ? "Add" : "Manage"}
-                        </button>
+    <!-- Content Wrapper -->
+    <div class="bg-black bg-opacity-75 rounded-xl shadow-lg text-center w-4/5 p-10">
+        <h1 class="text-white text-5xl font-bold mb-6 drop-shadow-lg animate-custom-pulse drop-shadow-[0_0_5px_rgba(0,0,0,1)]">
+            Server Name
+        </h1>
+        <div class="space-y-4">
+            {#each tabs as tab, tabIndex}
+                <div class="bg-emerald-400 font-bold text-black px-6 py-3 text-left rounded-lg cursor-pointer text-xl shadow-md hover:bg-pink-300 transition duration-300"
+                     on:click={() => toggleTab(tabIndex)}>
+                    <span class="underline">{tab.name}</span>
+                    <!-- Dynamically show + or - with black color and no underline -->
+                    <span class="ml-2 text-black" style="font-size: 1.5rem;">
+                        {activeTabs.includes(tabIndex) ? "-" : "+"}
+                    </span>
+                </div>
+                <div class={`mt-4 p-4 rounded-lg bg-transparent shadow-inner ${activeTabs.includes(tabIndex) ? 'block' : 'hidden'}`}>
+                    <!-- Use flexbox for horizontal layout -->
+                    <div class="flex flex-wrap gap-4">
+                        {#each tab.content as item}
+                            <div class="bg-black text-white p-4 rounded-lg shadow-md w-60">
+                                <p class="text-lg font-bold">{item.functionName}</p>
+                                <p class="text-sm text-gray-400">{item.description}</p>
+                                <button
+                                    class="mt-4 bg-emerald-400 hover:bg-pink-300 text-black py-2 px-4 rounded-lg transition duration-300"
+                                    on:click={() => toggleMode(item)}>
+                                    {item.mode === "add" ? "Add" : "Manage"}
+                                </button>
+                            </div>
+                        {/each}
                     </div>
-                {/each}
-            </div>
-        {/each}
+                </div>
+            {/each}
+        </div>
     </div>
 </div>
