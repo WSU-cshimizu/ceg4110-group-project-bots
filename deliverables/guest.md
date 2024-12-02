@@ -8,8 +8,8 @@
 
 ## Pertinent Questions
 
-- Question 1
-- Question 2
+- How does a team of big software engineers handle prioritization conflicts in a fast-paced, service-based industry, especially when unexpected issues arise?
+- What tools or methods do you use to quantify the impact of a feature or issue to support prioritization decisions?
 
 ## Lessons Learned
 
@@ -47,11 +47,12 @@ If a reason is provided, a "why" per se, for a requirement/feature, it is often 
 - **Date:** `24 October 2024`
 
 ## Pertinent Questions
+
 - Creating their own software instead of using big popular ones. How viable is this?
-  
 - Why are scrum and kanban the preferred agile frameworks and what does that say about the company?
 
 ## Lessons Learned
+
 - WinSupply runs multiple different methodology, Agile, Scrum, Kanban.
 - AI, ChatGPT (llm) big fixation right now. Even WinSupply trying to create solutions/products using AI.
 - AI/ChatGPT getting dumber with each iteration/release.
@@ -60,18 +61,20 @@ If a reason is provided, a "why" per se, for a requirement/feature, it is often 
 - Split team across 2 different time zones allows for much more efficient work hours in the day. For example, with a 10 hour time zone differnce, there will be at least one team working for almost 20 hours in a day.
 - Looking at technology in the long term. "How will this help us for the next 10 years" and not "how can we use this to solve a problem for tomorrow".
 
-## Guest 3
+## Guest 4
 
 - **Guest Lecturer:** `Leland Vakarian`
 - **Company:** `MITRE`
 - **Date:** `07 November 2024`
 
 ## Pertinent Questions
+
 - what is your role in MITRE?
 
 - Do you use your own programs or get the applications and such from outside sources?
 
 ## Lessons Learned
+
 - Everything you need to learn to be a full-stack developer has potentially grown.
 - if the company wants to teach you something, let them. Try different things and different paradigms.
 - Do not get attatched to your project and treat it like a pet. If it is not working, scrap it and move on.
