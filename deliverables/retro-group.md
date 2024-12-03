@@ -21,9 +21,8 @@
 
 ## What could have been better in the class...
 
-- item
-- item
-- item
+- Some activities felt like they overlapped too much and could be changed in preference for additional group time in class.
+- Having groups explain their diagrams to eachother after finishing to help get people more comfortable to talk in class.
 
 ## Further Comments
 
