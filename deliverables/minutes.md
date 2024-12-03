@@ -179,6 +179,7 @@ For the facade, we are basically showing that we are abstracting the utilities t
 
 - Ishan Ghimire
 - Joshua Quaintance
+- Jared Subr
 
 ---
 
@@ -208,6 +209,7 @@ For the facade, we are basically showing that we are abstracting the utilities t
 
 - Ishan Ghimire
 - Joshua Quaintance
+- Jared Subr
 
 ---
 
@@ -246,6 +248,7 @@ For the facade, we are basically showing that we are abstracting the utilities t
 
 - Ishan Ghimire
 - Joshua Quaintance
+- Jared Subr
 
 ---
 
@@ -282,3 +285,4 @@ For the facade, we are basically showing that we are abstracting the utilities t
 
 - Ishan Ghimire
 - Joshua Quaintance
+- Jared Subr
