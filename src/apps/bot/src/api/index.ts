@@ -23,11 +23,6 @@ export const createServer = (client: ClientApp) => {
         const options = await req.body.options
         const command = client.commands?.get(commandName);
 
-        console.log(req.body.options);
-        console.log(command);
-
-
-
         if (!command) {
             res.send({
                 status: 404,
@@ -40,18 +35,9 @@ export const createServer = (client: ClientApp) => {
         }
 
         try {
-            console.log("Running");
-            console.log('options', options);
-
             await command.apiExecute(client, options);
-            console.log('Done');
-
             res.sendStatus(200);
-
         } catch (error) {
-            console.log(error.cause);
-
-
             if (error.cause == 'channel-not-found') {
                 res.send({
                     status: 404,
@@ -62,7 +48,6 @@ export const createServer = (client: ClientApp) => {
                 })
             }
         }
-
     })
 
 
