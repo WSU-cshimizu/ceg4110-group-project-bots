@@ -79,3 +79,19 @@ If a reason is provided, a "why" per se, for a requirement/feature, it is often 
 - if the company wants to teach you something, let them. Try different things and different paradigms.
 - Do not get attatched to your project and treat it like a pet. If it is not working, scrap it and move on.
 - Do not be afraid to hop jobs early to get a broader experience of how different places operate. Helps down the line.
+
+## Guest 5
+
+- **Guest Lecturer:**  `Scott Duberstein`
+- **Company:** `Freelance`
+- **Date:** `21 November 2024`
+
+## Pertinent Questions
+
+- As someone who loves boxing, how has that impacted your work flow? Whether though your work cadence or motivation.
+- What are the ups and downs of being a freelancer worker compared to an employee at a tech firm? 
+
+#Lessons Learned
+- Avoid analysis paralysis which can cause long periods without progress due to spending more time thinking than doing.
+- Do not let imposter syndrome prevent you from furthur pursuing your career. Take some time for introspection and find what you are strong at.
+- In the pursuit of work, do not neglet your personal health. It is important to keep a balance.
