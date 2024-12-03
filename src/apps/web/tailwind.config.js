@@ -1,28 +1,22 @@
-
-// @ts-check
-import { join } from 'path';
-
-// 1. Import the Skeleton plugin
-import { skeleton } from '@skeletonlabs/tw-plugin';
-
 /** @type {import('tailwindcss').Config} */
 export default {
-	// 2. Opt for dark mode to be handled via the class method
-	darkMode: 'class',
-	content: [
-		'./src/**/*.{html,js,svelte,ts}',
-		// 3. Append the path to the Skeleton package
-		join(require.resolve(
-			'@skeletonlabs/skeleton'),
-			'../src/**/*.{html,js,svelte,ts}'
-		)
-	],
-	theme: {
-		extend: {},
-	},
-	plugins: [
-		// 4. Append the Skeleton plugin (after other plugins)
-		skeleton
-	]
+  content: [
+    './src/**/*.{html,js,svelte,ts}',
+    './src/routes/**/*.{html,js,svelte,ts}'
+  ],
+  theme: {
+    extend: {
+      animation: {
+        'custom-pulse': 'customPulse 20s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        customPulse: {
+          '0%, 100%': { color: 'rgba(148, 238, 196, 1)' }, // blue-500
+          '50%': { color: 'rgba(255, 194, 237, 1)' }, // blue-400
+        },
+      },
+    },
+  },
+  plugins: [],
 }
-						
+
