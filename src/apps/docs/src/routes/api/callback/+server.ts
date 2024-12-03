@@ -1,4 +1,4 @@
-import { BOT_TOKEN, CLIENT_ID, CLIENT_SECRET } from "$env/static/private";
+import { BOT_TOKEN, CLIENT_ID, CLIENT_SECRET, REDIRECT_URI } from "$env/static/private";
 import { json } from "@sveltejs/kit";
 
 export async function GET(req: any, res: any) {
@@ -9,7 +9,7 @@ export async function GET(req: any, res: any) {
             'client_id': CLIENT_ID,
             'client_secret': CLIENT_SECRET,
             'grant_type': 'authorization_code',
-            'redirect_uri': 'http://localhost:5170/api/callback',
+            'redirect_uri': REDIRECT_URI,
             'code': code,
             'scope': 'identify guilds'
         }),
