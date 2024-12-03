@@ -25,6 +25,7 @@ This document outlines the testing plan for the Discord bot developed using `dis
 1. Ensure the following prerequisites are met:
    - Sveltekit monorepo ith turborepo.
    - `discord.js` properly configured.
+   - Jest for testing.
    - Required environment variables set in a `.env` file.
    - Dummy Discord accounts and a separate testing bot added to the testing server.
    - External API endpoints available and responding.
@@ -35,6 +36,7 @@ This document outlines the testing plan for the Discord bot developed using `dis
 The testing process includes:
 
 - Validation of bot initialization and environment setup.
+- Mocking discord client with jest for testing.
 - Execution of all commands.
 - Handling of user interactions, including invalid inputs.
 - Verification of external API integrations.
@@ -109,7 +111,7 @@ The testing process includes:
 
 ## Testing Procedure
 
-1. Run the bot locally using `npm run dev` inside the bot workspace.
+1. Run the bot locally using `npm run test` inside the bot workspace.
 2. Conduct the following tests sequentially:
    - Verify bot initialization.
    - Test each command with valid and invalid inputs.
