@@ -181,7 +181,7 @@ For the facade, we are basically showing that we are abstracting the utilities t
 - Ishan Ghimire
 - Joshua Quaintance
 - Jared Subr
-
+- Gani Sagiev
 ---
 
 ## Meeting Minutes (November 14, 2024)
@@ -211,7 +211,7 @@ For the facade, we are basically showing that we are abstracting the utilities t
 - Ishan Ghimire
 - Joshua Quaintance
 - Jared Subr
-
+- Gani Sagiev
 ---
 
 ## Meeting Minutes (November 19, 2024)
@@ -250,7 +250,7 @@ For the facade, we are basically showing that we are abstracting the utilities t
 - Ishan Ghimire
 - Joshua Quaintance
 - Jared Subr
-
+- Gani Sagiev
 ---
 
 ## Meeting Minutes (November 23, 2024)
