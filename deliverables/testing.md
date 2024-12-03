@@ -85,6 +85,35 @@ The testing process includes:
   2. Observe the bot’s response in the server.
   3. Check for any error logs in the console.
 - **Expected Result**: The bot returns an appropriate error message without crashing.
+- 
+# Sample Slash Command Test using Jest
+
+This is an example of how to test a simple slash command using Jest. The test will mock the necessary `discord.js` interactions to verify that the bot responds correctly to a command.
+
+## Sample Test: helloCommand
+
+```javascript
+// helloCommand.test.js
+const { Client, CommandInteraction } = require('discord.js');
+const helloCommand = require('./commands/helloCommand'); // your command file
+
+jest.mock('discord.js'); // Mock discord.js interactions
+
+describe('Slash Command: hello', () => {
+  it('should send a hello message', async () => {
+    // Create a mock interaction
+    const mockInteraction = {
+      reply: jest.fn(), // Mock the reply method
+    };
+
+    // Execute the command
+    await helloCommand.execute(mockInteraction);
+
+    // Check that the bot replied correctly
+    expect(mockInteraction.reply).toHaveBeenCalledWith('Hello, World!');
+  });
+});
+```
 
 ---
 
