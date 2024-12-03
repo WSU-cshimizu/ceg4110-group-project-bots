@@ -1,10 +1,13 @@
 <script lang="ts">
-  import { actions } from './+page.server'; // Make sure actions are imported correctly.
+  import { CLIENT_ID, REDIRECT_URI } from '$env/static/private';
+  import { redirect } from "@sveltejs/kit";
+
+  // Make sure actions are imported correctly.
 
   // The function that handles the login
-  const loginToDiscord = async () => {
+  const loginToDiscord = () => {
     // Initiate the OAuth login flow
-    window.location.href = `https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&response_type=code&redirect_uri=YOUR_REDIRECT_URI&scope=identify+guilds`;
+
   };
 </script>
 
@@ -22,12 +25,14 @@
         It's reliable, fast, and easy to use. Perfect for any server getting started!
       </p>
       <div class="mt-6">
-        <button
-          on:click={loginToDiscord}
-          class="text-green-100 bg-black bg-opacity-75 px-6 py-3 rounded-lg text-xl md:text-2xl font-sans font-bold transition transform hover:scale-105 hover:text-pink-200 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]"
-        >
-          Login to Discord
-        </button>
+        <form method="POST" action="?/login">
+          <button
+          type="submit"
+            class="text-green-100 bg-black bg-opacity-75 px-6 py-3 rounded-lg text-xl md:text-2xl font-sans font-bold transition transform hover:scale-105 hover:text-pink-200 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]"
+          >
+            Login to Discord
+          </button>
+        </form>
       </div>
     </div>
   </div>
