@@ -140,7 +140,7 @@ describe('Slash Command: hello', () => {
 
 ## Testing Procedure
 
-1. Run the bot locally using `npm run test` inside the bot workspace.
+1. Run the bot locally using `npm run test` and `npm run test` for testing inside the bot workspace.
 2. Conduct the following tests sequentially:
    - Verify bot initialization.
    - Test each command with valid and invalid inputs.
