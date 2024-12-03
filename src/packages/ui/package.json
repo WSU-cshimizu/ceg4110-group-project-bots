@@ -14,7 +14,7 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
+    "@repo/eslint-config": "^0.0.0",
     "svelte": "^4.2.12"
   }
 }

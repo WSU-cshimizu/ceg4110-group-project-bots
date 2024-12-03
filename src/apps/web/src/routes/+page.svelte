@@ -1,89 +1,34 @@
-<script>
-    import "../app.css";
-    import { page } from "$app/stores";
+<script lang="ts">
+  import { CLIENT_ID, REDIRECT_URI } from '$env/static/private';
+  import { redirect } from "@sveltejs/kit";
+
+  const loginToDiscord = () => {
+  };
 </script>
 
-<style>
-    body {
-        background-color: #1a237e;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
-
-    .background-container {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        background-blend-mode: overlay;
-        background-image: linear-gradient(to top right, rgba(102, 187, 106, 0.6), rgba(244, 143, 177, 0.6)),
-            url('https://www.beautifulworld.com/wp-content/uploads/2016/09/Aurora-borealis-1.jpg');
-    }
-
-    .header-container {
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 20px 40px;
-        border-radius: 20px;
-        text-align: center;
-    }
-
-    p {
-        color: white;
-        font-size: 17px;
-        font-family: Arial, sans-serif;
-        text-shadow: 1px 0 10px white, 1px 0 30px black;
-    }
-
-    h1 {
-        color: #f1f8e9;
-        font-family: Arial, sans-serif;
-        font-size: 300px;
-        text-shadow: 1px 0 10px white, 1px 0 30px #76ff03;
-        margin: 0;
-
-    }
-
-    button {
-        color: #f1f8e9;
-        border-radius: 15px;
-        background-color: rgba(0, 0, 0, 0.75);
-        padding:20px 20px;
-        border: none;
-        outline: none;
-        font-family: Arial, sans-serif;
-        font-size: 50px;
-        text-shadow: 1px 0 10px white, 1px 0 30px #76ff03;
-        margin-top: 1rem;
-        transform: translateX(450px);
-        cursor: pointer;
-    }
-
-
-    button:hover {
-        color: rgb(255, 194, 237);
-        text-shadow: 1px 0 10px white, 1px 0 30px #f48fd2;
-    }
-</style>
-
-<body>
-    <div class="background-container">
-        <div class="header-container">
-            <h1>Welcome</h1>
-            <p>Borealis Bot is an all-in-one discord bot made to add some extra flair to your servers. It's reliable, fast, and easy to use, perfect for any server getting started!</p>
-            <div class>
-                <!--<a href="https://discord.com/api/oauth2/authorize?client_id=1296491638973268055&redirect_uri=https%3A%2F%2Fyourdomain.com%2FserverList&response_type=code&scope=identify%20guilds">-->
-                <a href="serverList">
-                    <button>Add to Discord</button>
-                </a>
-            </div>
-        </div>
+<div class="flex items-center justify-center h-screen bg-indigo-900">
+  <div
+    class="relative flex flex-col items-center justify-center h-screen w-screen bg-cover bg-center bg-blend-overlay"
+    style="background-image: linear-gradient(to top right, rgba(102, 187, 106, 0.6), rgba(244, 143, 177, 0.6)), url('https://www.beautifulworld.com/wp-content/uploads/2016/09/Aurora-borealis-1.jpg');"
+  >
+    <div class="bg-black bg-opacity-75 p-8 rounded-xl text-center w-11/12 max-w-2xl">
+      <h1 class="text-green-100 text-4xl md:text-6xl font-sans font-bold drop-shadow-lg">
+        Welcome
+      </h1>
+      <p class="text-white mt-4 text-lg md:text-xl font-sans drop-shadow-lg">
+        Borealis Bot is an all-in-one discord bot made to add some extra flair to your servers. 
+        It's reliable, fast, and easy to use. Perfect for any server getting started!
+      </p>
+      <div class="mt-6">
+        <form method="POST" action="?/login">
+          <button
+          type="submit"
+            class="text-green-100 bg-black bg-opacity-75 px-6 py-3 rounded-lg text-xl md:text-2xl font-sans font-bold transition transform hover:scale-105 hover:text-pink-200 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]"
+          >
+            Login to Discord
+          </button>
+        </form>
+      </div>
     </div>
-</body>
+  </div>
+</div>
