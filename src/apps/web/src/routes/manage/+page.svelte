@@ -28,7 +28,6 @@
 
     let activeTabs = []; // Track the indices of open tabs
 
-    // Toggle the active tab index
     function toggleTab(index) {
         if (activeTabs.includes(index)) {
             // If the tab is already open, close it
@@ -39,14 +38,12 @@
         }
     }
 
-    // Toggle the mode of the item
     function toggleMode(item) {
         item.mode = item.mode === "add" ? "manage" : "add";
     }
 </script>
 
 <div class="min-h-screen flex items-center justify-center bg-black/50">
-    <!-- Back to Server List Button outside the black box -->
     {#if $page.url.pathname === '/manage'}
         <a href="/serverList">
             <button class="absolute left-4 top-4 text-green-100 bg-transparent border-none outline-none font-sans text-4xl cursor-pointer hover:text-pink-300 transition-colors z-20">
@@ -55,7 +52,6 @@
         </a>
     {/if}
 
-    <!-- Content Wrapper -->
     <div class="bg-black bg-opacity-75 rounded-xl shadow-lg text-center w-4/5 p-10">
         <h1 class="text-white text-5xl font-bold mb-6 drop-shadow-lg animate-custom-pulse drop-shadow-[0_0_5px_rgba(0,0,0,1)]">
             Server Name
@@ -65,13 +61,11 @@
                 <div class="bg-emerald-400 font-bold text-black px-6 py-3 text-left rounded-lg cursor-pointer text-xl shadow-md hover:bg-pink-300 transition duration-300"
                      on:click={() => toggleTab(tabIndex)}>
                     <span class="underline">{tab.name}</span>
-                    <!-- Dynamically show + or - with black color and no underline -->
                     <span class="ml-2 text-black" style="font-size: 1.5rem;">
                         {activeTabs.includes(tabIndex) ? "-" : "+"}
                     </span>
                 </div>
                 <div class={`mt-4 p-4 rounded-lg bg-transparent shadow-inner ${activeTabs.includes(tabIndex) ? 'block' : 'hidden'}`}>
-                    <!-- Use flexbox for horizontal layout -->
                     <div class="flex flex-wrap gap-4">
                         {#each tab.content as item}
                             <div class="bg-black text-white p-4 rounded-lg shadow-md w-60">

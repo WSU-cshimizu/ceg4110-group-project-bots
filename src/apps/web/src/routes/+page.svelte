@@ -2,12 +2,7 @@
   import { CLIENT_ID, REDIRECT_URI } from '$env/static/private';
   import { redirect } from "@sveltejs/kit";
 
-  // Make sure actions are imported correctly.
-
-  // The function that handles the login
   const loginToDiscord = () => {
-    // Initiate the OAuth login flow
-
   };
 </script>
 
