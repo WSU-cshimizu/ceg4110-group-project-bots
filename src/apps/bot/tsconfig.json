@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "esnext", // Set the JavaScript target version
+    "module": "commonjs", // Use the CommonJS module system
+    "moduleResolution": "node", // Resolve modules like Node.js
+    "esModuleInterop": true, // Enable easier module interoperability
+    "skipLibCheck": true, // Skip checking library files
+    "forceConsistentCasingInFileNames": true, // Ensure consistent file name casing
+    "outDir": "./dist", // Specify the output directory for compiled files
+    "resolveJsonModule": true, // Allow importing .json files as modules
+    "baseUrl": ".", // Base directory for non-relative module imports
+    "paths": {
+      "*": ["node_modules/*"]
+    }
+  },
+  "include": [
+    "src/**/*", // Include all files in the `src` directory
+    "tests/**/*" // Include test files if they're in a separate folder
+  ],
+  "exclude": [
+    "node_modules" // Exclude node_modules folder from compilation
+  ]
+}
